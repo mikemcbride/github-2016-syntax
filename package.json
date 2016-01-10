@@ -9,7 +9,7 @@
     "github",
     "light"
   ],
-  "repository": "https://github.com/atom/github-2016-syntax",
+  "repository": "https://github.com/mmcbride1007/github-2016-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
