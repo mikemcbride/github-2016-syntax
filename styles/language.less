@@ -1,0 +1,308 @@
+
+// Language syntax highlighting
+
+.comment {
+  color: @syntax-comment-color;
+}
+
+.keyword {
+  color: @pink;
+
+  &.control {
+    color: @pink;
+  }
+
+  &.operator {
+    color: @pink;
+  }
+
+  &.other.special-method {
+    color: @blue;
+
+    &.ruby {
+      color: @pink;
+    }
+  }
+
+  &.other.unit {
+    color: @pink;
+  }
+}
+
+.storage {
+  color: @pink;
+}
+
+.constant {
+  color: @blue;
+
+  &.character.escape {
+    color: @navy;
+  }
+
+  &.numeric {
+    color: @blue;
+  }
+
+  &.other.color {
+    color: @blue;
+  }
+
+  &.other.symbol {
+    color: @blue;
+
+    &.ruby {
+      color: @blue;
+    }
+  }
+}
+
+.variable {
+  color: @pink;
+
+  &.interpolation {
+    color: @pink;
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+  }
+
+  &.other {
+    color: @syntax-text-color;
+
+    &.constant {
+      color: @blue;
+    }
+  }
+
+  &.separator {
+    color: @syntax-text-color;
+  }
+
+  &.language {
+    &.ruby {
+      color: @orange;
+    }
+  }
+}
+
+.invalid.illegal {
+  background-color: @pink;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @navy;
+
+
+  &.regexp {
+    color: @green;
+
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+
+  &.other.link {
+    color: @pink;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @syntax-comment-color;
+    }
+
+    &.variable {
+      &.ruby,
+      &.shell {
+        color: @syntax-text-color;
+      }
+    }
+
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      color: @orange;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @pink;
+  }
+}
+
+.support {
+  &.class {
+    color: @blue;
+  }
+
+  &.property-name {
+    color: @blue;
+  }
+
+  &.function  {
+    color: @blue;
+
+    &.kernel {
+      &.ruby {
+        color: @syntax-text-color;
+      }
+    }
+  }
+}
+
+.entity {
+
+  &.name.type {
+    color: @purple;
+  }
+
+  &.name.function {
+    color: @purple;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @orange;
+  }
+
+  &.name.section {
+    color: @blue;
+  }
+
+  &.name.tag {
+    color: @green;
+  }
+
+  &.name.module {
+    color: @purple;
+  }
+
+  &.other.attribute-name {
+    color: @purple;
+
+    &.mixin {
+      color: @blue;
+    }
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+}
+
+.meta {
+  &.class {
+    color: @orange;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @blue;
+
+    &.ruby {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.selector {
+    color: @purple;
+  }
+
+  &.separator {
+    background-color: #373b41;
+    color: @syntax-text-color;
+  }
+
+  &.tag {
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+// Languages -------------------------------------------------
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @pink;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @pink;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm {
+  .markup {
+    -webkit-font-smoothing: auto;
+    &.heading {
+      color: @pink;
+    }
+
+    &.link {
+      color: @purple;
+    }
+  }
+
+  .link .entity {
+    color: @blue;
+  }
+}
+
+.ruby {
+  &.symbol > .punctuation {
+    color: inherit;
+  }
+}
