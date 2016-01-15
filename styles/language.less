@@ -85,6 +85,11 @@
       color: @orange;
     }
   }
+
+  &.scss,
+  &.less {
+    color: @syntax-text-color;
+  }
 }
 
 .invalid.illegal {
@@ -155,6 +160,16 @@
 
   &.property-name {
     color: @blue;
+  }
+
+  &.constant {
+    &.property-value {
+      color: @blue;
+
+      &.css {
+        color: @syntax-text-color;
+      }
+    }
   }
 
   &.function  {
@@ -236,6 +251,18 @@
   &.tag {
     color: @syntax-text-color;
   }
+
+  &.property-list {
+    &.scss {
+      color: @blue;
+    }
+  }
+
+  &.property-value {
+    &.scss {
+      color: @blue;
+    }
+  }
 }
 
 .none {
@@ -305,22 +332,4 @@
   &.symbol > .punctuation {
     color: inherit;
   }
-}
-
-//scss
-.support.constant.property-value.css, .support.constant.property-value.scss, .variable.scss {
-  color: @syntax-text-color;
-}
-
-.meta.property-list.scss
-.meta.property-list.scss
-.meta.property-value.scss
-.support.constant.property-value.scss {
-  color: @blue;
-}
-
-
-//css
-.support.constant.property-name.css, .support.type.property-name.css {
-  color: @blue;
 }
